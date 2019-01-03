@@ -1,0 +1,27 @@
+/**
+* @file Generating 10000 random unique numbers 
+* @description this javascript program genarate an array of 10000 numbers that ranges from 1 to 10000.
+*	An if statement is used to parse out identical numbers. 
+* @var list 
+*	is an array of 10000 numbers within the range of 1 to 10000.
+* @var rand
+*	 Math.floor and Math.random are used to create is a random number between 1 and 10000.
+* @author Daniil <daple1997@gmail.com> phone: (587)-432-1541.
+* @version 0.1
+*/
+//list is initialized as an empty array.
+var list = [];
+//the while loops make sure that the list array is 10000 in length.
+while(list.length<10000){
+	// Math.floor() is used to avoid having a lot of digits after the decimal space.
+	// Math.random() is used generate a number 0 and 9999, then 1 is added to make the range 1 to 10000
+	// The random number is stored in the rand variable
+	var rand = Math.floor(Math.random() * 10000) + 1;
+	//The if statement checks if any elements in the array are the same as rand. If not it pushes rand in the last place
+	if(list.indexOf(rand) === -1){
+		list.push(rand);
+	}
+}
+//The list should be seen in the console log of your browser. To find the array press "Crtl"+ "Shift" + "I". Go to the "Console" tab
+//and you should find an array of length 10000 with unique numbers ranging from 1 to 10000 
+console.log(list);
